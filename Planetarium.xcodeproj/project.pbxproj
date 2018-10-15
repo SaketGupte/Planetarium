@@ -14,6 +14,10 @@
 		3C7BD1602164F69F009CC3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7BD15F2164F69F009CC3FC /* Assets.xcassets */; };
 		3C7BD1632164F69F009CC3FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7BD1612164F69F009CC3FC /* LaunchScreen.storyboard */; };
 		3C7BD16E2164F69F009CC3FC /* PlanetariumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BD16D2164F69F009CC3FC /* PlanetariumTests.swift */; };
+		3C8CE3272174C3600079904B /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CE3262174C3600079904B /* Planet.swift */; };
+		3C8CE3292174C5360079904B /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CE3282174C5360079904B /* Presenter.swift */; };
+		3C8CE32B2174C7620079904B /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CE32A2174C7620079904B /* Builder.swift */; };
+		3C8CE32D2174C7EC0079904B /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CE32C2174C7EC0079904B /* Interactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		3C7BD1692164F69F009CC3FC /* PlanetariumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetariumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7BD16D2164F69F009CC3FC /* PlanetariumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumTests.swift; sourceTree = "<group>"; };
 		3C7BD16F2164F69F009CC3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C8CE3262174C3600079904B /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		3C8CE3282174C5360079904B /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		3C8CE32A2174C7620079904B /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		3C8CE32C2174C7EC0079904B /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +90,14 @@
 				3C7BD1562164F69F009CC3FC /* AppDelegate.swift */,
 				3C7BD1582164F69F009CC3FC /* art.scnassets */,
 				3C7BD15A2164F69F009CC3FC /* ViewController.swift */,
+				3C8CE3282174C5360079904B /* Presenter.swift */,
 				3C7BD15C2164F69F009CC3FC /* Main.storyboard */,
 				3C7BD15F2164F69F009CC3FC /* Assets.xcassets */,
 				3C7BD1612164F69F009CC3FC /* LaunchScreen.storyboard */,
 				3C7BD1642164F69F009CC3FC /* Info.plist */,
+				3C8CE3262174C3600079904B /* Planet.swift */,
+				3C8CE32A2174C7620079904B /* Builder.swift */,
+				3C8CE32C2174C7EC0079904B /* Interactor.swift */,
 			);
 			path = Planetarium;
 			sourceTree = "<group>";
@@ -203,8 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8CE32D2174C7EC0079904B /* Interactor.swift in Sources */,
 				3C7BD15B2164F69F009CC3FC /* ViewController.swift in Sources */,
 				3C7BD1572164F69F009CC3FC /* AppDelegate.swift in Sources */,
+				3C8CE3292174C5360079904B /* Presenter.swift in Sources */,
+				3C8CE3272174C3600079904B /* Planet.swift in Sources */,
+				3C8CE32B2174C7620079904B /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
