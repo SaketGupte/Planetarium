@@ -22,7 +22,23 @@ final class Interactor {
 extension Interactor: InteractorInput {
 
     func fetchPlanets() {
-        presenter?.present(planets: [])
+        presenter?.present(planets: [sun(), earth()])
+    }
+
+    func earth() -> Planet {
+
+        let coordinates = Coordinates(xPosition: 0, yPosition: 0, zPosition: 0)
+
+        return Planet(name: "Earth",
+                      position: coordinates,
+                      radius: 0.5,
+                      spinSpeed: 0,
+                      image: #imageLiteral(resourceName: "Earth.jpg"))
+    }
+
+    func sun() -> Planet {
+        let coordinates = Coordinates(xPosition: 0, yPosition: 0, zPosition: -1)
+        return Planet(name: "Sun", position: coordinates, radius: 1, spinSpeed: 0, image: #imageLiteral(resourceName: "Sun.jpg"))
     }
 
 }

@@ -45,7 +45,12 @@ extension Presenter: InteractorOutput {
 private extension Presenter {
 
     func map(planets: [Planet]) -> [PlanetViewModel] {
-        return []
+        return planets.compactMap { planet -> PlanetViewModel in
+            return PlanetViewModel(position: planet.position,
+                                   image: planet.image,
+                                   radius: planet.radius,
+                                   spinSpeed: planet.spinSpeed)
+        }
     }
 }
 

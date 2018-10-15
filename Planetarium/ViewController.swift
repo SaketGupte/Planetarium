@@ -39,7 +39,7 @@ class ViewController: UIViewController {
 
 extension ViewController: ViewInput {
     func render(planets: [PlanetViewModel]) {
-        showShip()
+        showPlanets(viewModels: planets)
     }
 }
 
@@ -62,6 +62,35 @@ private extension ViewController {
     func showShip() {
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
         sceneView.scene = scene
+    }
+
+    func showPlanets(viewModels: [PlanetViewModel]) {
+
+        let scene = SCNScene()
+        sceneView.scene = scene
+
+        viewModels.forEach { planetViewModel in
+            let planet = createPlanet(with: planetViewModel)
+            scene.rootNode.addChildNode(planet)
+        }
+
+        func createPlanet(with viewModel: PlanetViewModel) -> SCNNode {
+            let planetNode = SCNNode()
+            planetNode.geometry = SCNSphere(radius: viewModel.radius)
+            planetNode.geometry?.materials = [surface(for: viewModel)]
+            planetNode.position = SCNVector3(viewModel.position.xPosition,
+                                             viewModel.position.yPosition,
+                                             viewModel.position.zPosition)
+            return planetNode
+        }
+
+        func surface(for viewModel: PlanetViewModel) -> SCNMaterial {
+            let material = SCNMaterial()
+            material.diffuse.contents = viewModel.image
+            return material
+        }
+
+
     }
 
     func pauseARSession() {

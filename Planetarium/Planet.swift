@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-typealias Radius = Double
+typealias Radius = CGFloat
 typealias AxisPosition = Double
 
 struct Planet {
@@ -16,6 +17,7 @@ struct Planet {
     let position: Coordinates
     let radius: Radius
     let spinSpeed: Int
+    let image: UIImage
 }
 
 struct Coordinates {
