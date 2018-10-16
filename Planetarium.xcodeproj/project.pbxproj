@@ -14,6 +14,19 @@
 		3C7BD1602164F69F009CC3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7BD15F2164F69F009CC3FC /* Assets.xcassets */; };
 		3C7BD1632164F69F009CC3FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7BD1612164F69F009CC3FC /* LaunchScreen.storyboard */; };
 		3C7BD16E2164F69F009CC3FC /* PlanetariumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BD16D2164F69F009CC3FC /* PlanetariumTests.swift */; };
+		3C8CE3272174C3600079904B /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CE3262174C3600079904B /* Planet.swift */; };
+		3C8CE3292174C5360079904B /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CE3282174C5360079904B /* Presenter.swift */; };
+		3C8CE32B2174C7620079904B /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CE32A2174C7620079904B /* Builder.swift */; };
+		3C8CE32D2174C7EC0079904B /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8CE32C2174C7EC0079904B /* Interactor.swift */; };
+		3C8CE3382174EFF70079904B /* Sun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8CE32F2174EFF60079904B /* Sun.jpg */; };
+		3C8CE3392174EFF70079904B /* Mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8CE3302174EFF60079904B /* Mars.jpg */; };
+		3C8CE33A2174EFF70079904B /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8CE3312174EFF60079904B /* Venus.jpg */; };
+		3C8CE33B2174EFF70079904B /* Jupiter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8CE3322174EFF70079904B /* Jupiter.jpg */; };
+		3C8CE33C2174EFF70079904B /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8CE3332174EFF70079904B /* Earth.jpg */; };
+		3C8CE33D2174EFF70079904B /* Mercury.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8CE3342174EFF70079904B /* Mercury.jpg */; };
+		3C8CE33E2174EFF70079904B /* Neptune.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8CE3352174EFF70079904B /* Neptune.jpg */; };
+		3C8CE33F2174EFF70079904B /* Saturn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8CE3362174EFF70079904B /* Saturn.jpg */; };
+		3C8CE3402174EFF70079904B /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C8CE3372174EFF70079904B /* Uranus.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +51,19 @@
 		3C7BD1692164F69F009CC3FC /* PlanetariumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetariumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7BD16D2164F69F009CC3FC /* PlanetariumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumTests.swift; sourceTree = "<group>"; };
 		3C7BD16F2164F69F009CC3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C8CE3262174C3600079904B /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		3C8CE3282174C5360079904B /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		3C8CE32A2174C7620079904B /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		3C8CE32C2174C7EC0079904B /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		3C8CE32F2174EFF60079904B /* Sun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sun.jpg; sourceTree = "<group>"; };
+		3C8CE3302174EFF60079904B /* Mars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mars.jpg; sourceTree = "<group>"; };
+		3C8CE3312174EFF60079904B /* Venus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Venus.jpg; sourceTree = "<group>"; };
+		3C8CE3322174EFF70079904B /* Jupiter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jupiter.jpg; sourceTree = "<group>"; };
+		3C8CE3332174EFF70079904B /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth.jpg; sourceTree = "<group>"; };
+		3C8CE3342174EFF70079904B /* Mercury.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mercury.jpg; sourceTree = "<group>"; };
+		3C8CE3352174EFF70079904B /* Neptune.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Neptune.jpg; sourceTree = "<group>"; };
+		3C8CE3362174EFF70079904B /* Saturn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saturn.jpg; sourceTree = "<group>"; };
+		3C8CE3372174EFF70079904B /* Uranus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uranus.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +105,18 @@
 		3C7BD1552164F69F009CC3FC /* Planetarium */ = {
 			isa = PBXGroup;
 			children = (
+				3C8CE32E2174EFDE0079904B /* Images */,
 				3C7BD1562164F69F009CC3FC /* AppDelegate.swift */,
 				3C7BD1582164F69F009CC3FC /* art.scnassets */,
 				3C7BD15A2164F69F009CC3FC /* ViewController.swift */,
+				3C8CE3282174C5360079904B /* Presenter.swift */,
 				3C7BD15C2164F69F009CC3FC /* Main.storyboard */,
 				3C7BD15F2164F69F009CC3FC /* Assets.xcassets */,
 				3C7BD1612164F69F009CC3FC /* LaunchScreen.storyboard */,
 				3C7BD1642164F69F009CC3FC /* Info.plist */,
+				3C8CE3262174C3600079904B /* Planet.swift */,
+				3C8CE32A2174C7620079904B /* Builder.swift */,
+				3C8CE32C2174C7EC0079904B /* Interactor.swift */,
 			);
 			path = Planetarium;
 			sourceTree = "<group>";
@@ -97,6 +128,22 @@
 				3C7BD16F2164F69F009CC3FC /* Info.plist */,
 			);
 			path = PlanetariumTests;
+			sourceTree = "<group>";
+		};
+		3C8CE32E2174EFDE0079904B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3C8CE3332174EFF70079904B /* Earth.jpg */,
+				3C8CE3322174EFF70079904B /* Jupiter.jpg */,
+				3C8CE3302174EFF60079904B /* Mars.jpg */,
+				3C8CE3342174EFF70079904B /* Mercury.jpg */,
+				3C8CE3352174EFF70079904B /* Neptune.jpg */,
+				3C8CE3362174EFF70079904B /* Saturn.jpg */,
+				3C8CE32F2174EFF60079904B /* Sun.jpg */,
+				3C8CE3372174EFF70079904B /* Uranus.jpg */,
+				3C8CE3312174EFF60079904B /* Venus.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,10 +229,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8CE3382174EFF70079904B /* Sun.jpg in Resources */,
 				3C7BD1592164F69F009CC3FC /* art.scnassets in Resources */,
+				3C8CE3392174EFF70079904B /* Mars.jpg in Resources */,
+				3C8CE33C2174EFF70079904B /* Earth.jpg in Resources */,
 				3C7BD1632164F69F009CC3FC /* LaunchScreen.storyboard in Resources */,
+				3C8CE33A2174EFF70079904B /* Venus.jpg in Resources */,
+				3C8CE33B2174EFF70079904B /* Jupiter.jpg in Resources */,
+				3C8CE33D2174EFF70079904B /* Mercury.jpg in Resources */,
 				3C7BD1602164F69F009CC3FC /* Assets.xcassets in Resources */,
+				3C8CE33E2174EFF70079904B /* Neptune.jpg in Resources */,
+				3C8CE33F2174EFF70079904B /* Saturn.jpg in Resources */,
 				3C7BD15E2164F69F009CC3FC /* Main.storyboard in Resources */,
+				3C8CE3402174EFF70079904B /* Uranus.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,8 +259,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8CE32D2174C7EC0079904B /* Interactor.swift in Sources */,
 				3C7BD15B2164F69F009CC3FC /* ViewController.swift in Sources */,
 				3C7BD1572164F69F009CC3FC /* AppDelegate.swift in Sources */,
+				3C8CE3292174C5360079904B /* Presenter.swift in Sources */,
+				3C8CE3272174C3600079904B /* Planet.swift in Sources */,
+				3C8CE32B2174C7620079904B /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8D4FAC2Y8G;
 				INFOPLIST_FILE = Planetarium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.saketgupte.Planetarium;
@@ -372,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8D4FAC2Y8G;
 				INFOPLIST_FILE = Planetarium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.saketgupte.Planetarium;

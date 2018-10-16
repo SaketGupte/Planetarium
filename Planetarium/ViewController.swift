@@ -10,71 +10,90 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
 
-    @IBOutlet var sceneView: ARSCNView!
+protocol ViewInput: class {
+    func render(planets: [PlanetViewModel])
+}
+
+class ViewController: UIViewController {
+
+    var sceneView: ARSCNView!
+    var presenter: ViewOutput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the view's delegate
-        sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
+        configureSceneView()
+        presenter.viewIsReady()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        sceneView.session.run(configuration)
+        launchARSession()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        // Pause the view's session
-        sceneView.session.pause()
+        pauseARSession()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
+}
+
+extension ViewController: ViewInput {
+    func render(planets: [PlanetViewModel]) {
+        showPlanets(viewModels: planets)
+    }
+}
+
+extension ViewController: ARSCNViewDelegate {}
+
+private extension ViewController {
+
+    func configureSceneView() {
+        sceneView = ARSCNView(frame: view.frame)
+        sceneView.delegate = self
+        sceneView.showsStatistics = true
+        view.addSubview(sceneView)
     }
 
-    // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
+    func launchARSession() {
+        let configuration = ARWorldTrackingConfiguration()
+        sceneView.session.run(configuration)
     }
-*/
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
+
+    func showShip() {
+        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        sceneView.scene = scene
     }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
+
+    func showPlanets(viewModels: [PlanetViewModel]) {
+
+        let scene = SCNScene()
+        sceneView.scene = scene
+
+        viewModels.forEach { planetViewModel in
+            let planet = createPlanet(with: planetViewModel)
+            scene.rootNode.addChildNode(planet)
+        }
+
+        func createPlanet(with viewModel: PlanetViewModel) -> SCNNode {
+            let planetNode = SCNNode()
+            planetNode.geometry = SCNSphere(radius: viewModel.radius)
+            planetNode.geometry?.materials = [surface(for: viewModel)]
+            planetNode.position = SCNVector3(viewModel.position.xPosition,
+                                             viewModel.position.yPosition,
+                                             viewModel.position.zPosition)
+            return planetNode
+        }
+
+        func surface(for viewModel: PlanetViewModel) -> SCNMaterial {
+            let material = SCNMaterial()
+            material.diffuse.contents = viewModel.image
+            return material
+        }
+
+
     }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
+
+    func pauseARSession() {
+        sceneView.session.pause()
     }
 }
